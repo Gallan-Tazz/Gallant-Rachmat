@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despicable</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: red;
+            background-image: url(jackilicious.jpeg);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>WANNA GET OUT?</h1>
+    <button>I CAN'T!</button>
+</body>
+<script>
+    let myTimeOut = setTimeout(() => {
+    document.querySelector('h1').innerHTML = "DO YOU LIKE IT HERE UNDER THESE STREET LAMPS?";
+    }, 500);
+
+    document.querySelector('button').addEventListener('click', ()=>{
+        clearTimeout(myTimeOut);
+        document.querySelector('h1').innerHTML = "NO SHINING BRIGHT IT DOESN'T SIT RIGHT WITH ME";
+        document.querySelector('button').style.display = "none";
+    })
+</script>
+</html>
